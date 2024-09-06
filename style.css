@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    background-image: url('your-background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.95;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: red;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: white; 
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    color: red;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#about, #courses, #contact, #proof {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about h2, #courses h2, #contact h2, #proof h2 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+
+.proof-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.ceo-description {
+    max-width: 50rem;
+    text-align: left;
+}
+
+
+section {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: black;
+    color: red;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+.ad-banner {
+    background-color: lightblue; /* Change as needed */
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0; /* Adds space around the ad section */
+    border-radius: 10px; /* Rounds the corners */
+}
+
+.ad-banner h2 {
+    color: red;
+}
+
+.ad-banner .ad-image {
+    max-width: 80%; 
+    height: auto;
+}
+
+.ad-banner .btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:1rem;
+}
+
+
+
+#contact {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px; /* Space between fields */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px  solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: red;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #999;
+    transition: 0.2s ease all;
+    pointer-events: none; /* Prevents label from interfering with input click */
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -10px; /* Moves label above the input */
+    left: 15px;
+    font-size: 12px;
+    color: red; /* Change color when label moves */
+}
+
+.contact-option {
+    margin-top: 20px;
+}
+
+.contact-option p {
+    margin-bottom: 10px;
+}
+
+.contact-option .btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact-option .btn:hover {
+    background-color: darkred;
+}
+
+
+
+
+
+
+
+
+
+.success-message {
+    margin-top: 20px;
+    color: green;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease;
+}
+
+.success-message.visible {
+    opacity: 1; /* Fade in effect */
+}
+
+.checkmark {
+    font-size: 24px; /* Size of the checkmark */
+    margin-right: 10px; /* Space between checkmark and text */
+    animation: checkmark-animation 0.5s ease;
+}
+
+@keyframes checkmark-animation {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#ceo-image{
+  width: 50%;
+  height: auto;
+}
+
+
+
+
+
+
+
+/* Initial state for all sections */
+section {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Class to fade in */
+.fade-in {
+    opacity: 1;
+}
+
+/* Class to fade out */
+.fade-out {
+    opacity: 0;
+}
